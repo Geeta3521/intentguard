@@ -252,7 +252,7 @@ intentguard/
 └── README.md
 🚀 Running Locally
 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/intentguard.git
+git clone https://github.com/Geeta3521/intentguard.git
 cd intentguard
 2. Create virtual environment
 python -m venv .venv
@@ -357,4 +357,3 @@ AI Agents + Machine Learning + Payment Security + FastAPI
 Consider starring the repository ⭐
 
 
-### Step 3 — Save it
