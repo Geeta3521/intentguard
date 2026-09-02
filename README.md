@@ -358,28 +358,3 @@ Consider starring the repository ⭐
 
 
 ### Step 3 — Save it
-
-Press:
-
-**Ctrl + S**
-
-### Step 4 — Push the README
-
-Back in PowerShell, from:
-
-```text
-C:\Users\Geetha\OneDrive\Desktop\intentguard
-
-run:
-
-git add README.md
-
-then:
-
-git commit -m "Add professional project README"
-
-then:
-
-git push
-
-After that, refresh GitHub.
