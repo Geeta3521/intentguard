@@ -1,0 +1,580 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080b12;
+    color: #f5f7fb;
+    min-height: 100vh;
+}
+
+.container {
+    width: min(1200px, 92%);
+    margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #202633;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.logo span {
+    margin-left: 8px;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #aab3c5;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+    background: #35e58b;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #35e58b;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    text-align: center;
+    padding: 65px 20px 45px;
+}
+
+.hero h1 {
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #6ea8ff;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    color: #9ca6b8;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+
+/* =========================
+   DASHBOARD STATISTICS
+========================= */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.stat-card {
+    background: #10151f;
+    border: 1px solid #242c3a;
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.stat-card > span {
+    font-size: 28px;
+}
+
+.stat-card p {
+    color: #8e99ac;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.stat-card h2 {
+    font-size: 25px;
+}
+
+.allow-stat {
+    border-color: #287d55;
+}
+
+.review-stat {
+    border-color: #806525;
+}
+
+.block-stat {
+    border-color: #863737;
+}
+
+
+/* =========================
+   MAIN GRID
+========================= */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.card {
+    background: #10151f;
+    border: 1px solid #242c3a;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.card-title span {
+    font-size: 22px;
+}
+
+.card-title h2 {
+    font-size: 19px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+label {
+    display: block;
+    color: #9da8ba;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+textarea,
+input,
+select {
+    width: 100%;
+    background: #080c14;
+    color: #ffffff;
+    border: 1px solid #2a3444;
+    border-radius: 9px;
+    padding: 12px;
+    outline: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+textarea {
+    min-height: 145px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+    border-color: #6ea8ff;
+    box-shadow: 0 0 0 3px rgba(110, 168, 255, 0.1);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 17px;
+}
+
+
+/* =========================
+   CHECK BUTTON
+========================= */
+
+#checkButton {
+    width: 100%;
+    margin-top: 22px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #377dff;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#checkButton:hover {
+    background: #5591ff;
+    transform: translateY(-1px);
+}
+
+#checkButton:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.result-card {
+    min-height: 300px;
+}
+
+.empty-state {
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #778196;
+}
+
+.empty-state div {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.empty-state p {
+    line-height: 1.6;
+}
+
+
+/* =========================
+   DECISION
+========================= */
+
+.decision {
+    text-align: center;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.decision h3 {
+    font-size: 30px;
+    margin-bottom: 7px;
+}
+
+.decision p {
+    color: #aeb7c7;
+    font-size: 13px;
+}
+
+.decision.allow {
+    border: 1px solid #287d55;
+    background: rgba(40, 125, 85, 0.12);
+}
+
+.decision.review {
+    border: 1px solid #9a7624;
+    background: rgba(154, 118, 36, 0.12);
+}
+
+.decision.block {
+    border: 1px solid #9a3030;
+    background: rgba(154, 48, 48, 0.12);
+}
+
+
+/* =========================
+   RISK SCORE
+========================= */
+
+.risk-box {
+    margin-bottom: 20px;
+}
+
+.risk-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.risk-header span:first-child {
+    color: #9da8ba;
+    font-size: 13px;
+}
+
+.risk-value {
+    font-weight: bold;
+}
+
+.risk-bar {
+    height: 9px;
+    background: #252c38;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.risk-fill {
+    height: 100%;
+    border-radius: 20px;
+    transition: width 0.5s ease;
+}
+
+
+/* =========================
+   RISK LEVEL
+========================= */
+
+.risk-level {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #9da8ba;
+}
+
+.risk-level strong {
+    color: #ffffff;
+}
+
+
+/* =========================
+   CHECKS
+========================= */
+
+.check-list {
+    display: grid;
+    gap: 9px;
+}
+
+.check-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 12px;
+    background: #0a0f17;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.pass {
+    color: #35e58b;
+}
+
+.fail {
+    color: #ff6262;
+}
+
+.warning {
+    color: #ffc857;
+}
+
+
+/* =========================
+   SECURITY EXPLANATION
+========================= */
+
+.explanation {
+    margin-top: 18px;
+    padding: 15px;
+    background: #0a0f17;
+    border-radius: 10px;
+    border: 1px solid #252d3a;
+}
+
+.explanation h4 {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.explanation p {
+    color: #aeb7c7;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.explanation strong {
+    color: #ffffff;
+}
+
+
+/* =========================
+   ALERTS
+========================= */
+
+.alert {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 9px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.alert.warning-alert {
+    background: rgba(255, 200, 87, 0.08);
+    border: 1px solid #6d5926;
+}
+
+.alert.block-alert {
+    background: rgba(255, 80, 80, 0.08);
+    border: 1px solid #713333;
+}
+
+
+/* =========================
+   TRANSACTION HISTORY
+========================= */
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+.history-table th {
+    text-align: left;
+    color: #778196;
+    padding: 10px 6px;
+    border-bottom: 1px solid #252d3a;
+}
+
+.history-table td {
+    padding: 11px 6px;
+    border-bottom: 1px solid #1d2531;
+    color: #cbd2df;
+}
+
+.history-table tr:last-child td {
+    border-bottom: none;
+}
+
+.empty-history {
+    text-align: center;
+    padding: 35px 10px;
+    color: #697386;
+    font-size: 13px;
+}
+
+
+/* =========================
+   SCENARIOS
+========================= */
+
+.scenario-card {
+    grid-column: 1 / -1;
+}
+
+.scenario-description {
+    color: #858fa2;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.scenario-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.scenario-grid button {
+    background: #151c28;
+    color: #dce2ec;
+    border: 1px solid #2a3444;
+    border-radius: 9px;
+    padding: 12px 8px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.2s;
+}
+
+.scenario-grid button:hover {
+    border-color: #6ea8ff;
+    background: #1a2434;
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 40px 0;
+    margin-top: 35px;
+    border-top: 1px solid #202633;
+    display: flex;
+    justify-content: space-between;
+    color: #697386;
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .scenario-card {
+        grid-column: auto;
+    }
+
+    .hero {
+        padding-top: 45px;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .scenario-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    header {
+        height: 65px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
